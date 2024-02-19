@@ -1,0 +1,72 @@
+.profile-data {
+    color: #ffffff; /* White text */
+    font-family: Arial, sans-serif; /* Choose a suitable font */
+}
+
+.profile-data label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.first-last-name label {
+    font-weight: bold;
+    font-size: 24px; /* Larger font size */
+}
+
+.link-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.link-btn:hover {
+    background-color: #333333; /* Darker shade of black on hover */
+}
+
+/* Container for profile data */
+.profile-container {
+    padding: 20px;
+    border: 1px solid #ffffff; /* White border */
+    border-radius: 10px;
+    background-color: #000000; /* Black background */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* White box shadow */
+}
+
+button {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    margin-top: 20px;
+  
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  button:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+  }

@@ -1,0 +1,121 @@
+.App {
+  text-align: center;
+  background-image: url("https://images6.alphacoders.com/128/1289303.png"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+
+}
+
+.profile-data {
+  margin-top: 40px;
+}
+
+.first-last-name{
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
+.nav-bar {
+  margin-top: 20px;
+  width: 100%;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+.link-btn {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid #212529;
+  color: #212529;
+}
+.link-btn:hover {
+  color: #fff;
+}
+.link-btn:hover:after {
+  width: 100%;
+}
+.link-btn:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #212529;
+}
+
+.nav-item:hover {
+  background-color: darkgray;
+}
+
+.nav-item,.user-name-nav {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
