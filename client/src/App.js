@@ -11,6 +11,7 @@ import QuizQuestions from "./components/Quizquestion";
 import EditUserData from './components/RegistrationEdit';
 import UserList from './components/UserList';
 import Login from './components/Login';
+import LeaderBoard from './components/LeaderBoard';
 import { useState } from "react";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
                     <Route path='/users' element={<UserList/>}/>
                     <Route path='/login' element={<Login onLogin={handleLogin}/>}/>
                     <Route path="/learn" element={<Learn />} />
+                    <Route path="/leaderboard" element={<LeaderBoard />} />
             </Routes>
         </Router>
     </div>

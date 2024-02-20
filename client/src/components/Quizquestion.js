@@ -52,7 +52,8 @@ function handleSubmit(event) {
       },
       body: JSON.stringify({
         qiuzId: quizCount,
-        userId: "placeholder",
+        userId: localStorage.getItem('currentUserId'),
+        userName: localStorage.getItem('currentUser'),
         result: testScoreVar,
         percentage: testScoreVar*10,
       })

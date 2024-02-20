@@ -20,7 +20,7 @@ function NavBar(props) {
             <a href="/profile"><div className="nav-item">
                 <label>Profile</label>
             </div></a>
-            <a href="/leaderbord"><div className="nav-item">
+            <a href="/leaderboard"><div className="nav-item">
                 <label>Leaderboard</label>
             </div></a>
             <a href="/users"><div className="nav-item">

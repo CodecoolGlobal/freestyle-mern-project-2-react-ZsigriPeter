@@ -33,6 +33,22 @@
   color: white;
 }
 
+.Leaderboard table {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  border: white 1px solid;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.Leaderboard table th {
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: white 1px solid;
+}
 
 
 .link-btn {

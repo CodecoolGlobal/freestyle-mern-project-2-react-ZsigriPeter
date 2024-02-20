@@ -24,6 +24,17 @@ app.get("/api/blackholes", async (req, res) => {
   }
 });
 
+app.get("/api/leaderboard", (req,res,next)=> {
+  try {
+    QuizResults.find()
+    .then((qRes)=> {
+      res.json(qRes);
+    })
+  } catch (error) {
+    res.send(next);
+  }
+})
+
 app.get("/api/user/:id", (req, res) => {
   User.findOne({ _id: req.params.id })
     .then((user) => {
@@ -85,6 +96,7 @@ app.post("/api/quiz", (req, res) => {
   const quizResult = new QuizResults({
     quizId: quizData.quizId,
     userId: quizData.userId,
+    userName: quizData.userName,
     result: quizData.result,
     percentage: quizData.percentage,
     createdAt: createdAt,
