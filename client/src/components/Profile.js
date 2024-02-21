@@ -4,8 +4,15 @@ import "./Profile.css";
 
 function Profile(props) {
     const [userData, setUserData] = useState(null);
+    const [quizResults,setQuizResults]=useState(null);
 
     const userId = props.userId;
+
+    const fetchResultsForUser=(userId)=> {
+        fetch(`/api/quizresults/${userId}`)
+        .then((ressponse)=>ressponse.json())
+        .then(response=> setQuizResults(response))
+    }
 
     const fetchUserById = () => {
         fetch(`/api/user/${userId}`, {
@@ -23,6 +30,7 @@ function Profile(props) {
 
     useEffect(() => {
         fetchUserById();
+        fetchResultsForUser(userId);
     }, []);
 
     return (
@@ -52,6 +60,24 @@ function Profile(props) {
                 <a className="link-btn" href="/profile/edit"><div className="nav-item">
                 <label>Edit Userdata</label>
             </div></a>
+            <div className="Leaderboard">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Quiz Result</th>
+                        <th>Result Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {quizResults.map((quizResult)=>(
+                        <tr key={quizResult._id}>
+                            <td>{quizResult.result} point(s)</td>
+                            <td>{quizResult.percentage}%</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+            </div>
             </>
 
             ) : (
