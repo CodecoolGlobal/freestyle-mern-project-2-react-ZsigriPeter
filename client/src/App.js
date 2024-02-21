@@ -13,6 +13,7 @@ import UserList from './components/UserList';
 import Login from './components/Login';
 import LeaderBoard from './components/LeaderBoard';
 import { useState } from "react";
+import MainPage from './components/MainPage';
 
 function App() {
   const [user, setUser] = useState(localStorage.getItem("currentUser"));
@@ -28,6 +29,7 @@ function App() {
       <NavBar userName={user}></NavBar>
        <Router>
             <Routes>
+              <Route path='/' element={<MainPage/>} />
                 <Route path='/profile' element={<Profile userId={userId} />} />
                 <Route path='/profile/edit' element={<ProfileEdit userId={userId} />} />
                   <Route path='/quiz' element={<QuizQuestions />}/>
