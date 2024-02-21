@@ -7,14 +7,9 @@ function fetchQuizResults() {
     return fetch("/api/leaderboard").then(response => response.json());
 }
 
-function fetchUserById(id) {
-    return fetch(`/api/user/${id}`).then(res=>res.json());
-}
-
 function LeaderBoard(props) {
     const [qiuzResults,setQuizResults]=useState(null);
     const [loading,setLoading]=useState(true);
-    const [userNames,setUserNames]=useState();
 
     useEffect(()=> {
         fetchQuizResults()

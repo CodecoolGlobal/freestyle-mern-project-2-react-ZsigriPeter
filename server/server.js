@@ -26,7 +26,7 @@ app.get("/api/blackholes", async (req, res) => {
 
 app.get("/api/leaderboard", (req,res,next)=> {
   try {
-    QuizResults.find()
+    QuizResults.find().sort({ result: "desc" })
     .then((qRes)=> {
       res.json(qRes);
     })
@@ -39,6 +39,16 @@ app.get("/api/user/:id", (req, res) => {
   User.findOne({ _id: req.params.id })
     .then((user) => {
       res.json(user);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
+
+app.get("/api/quizresults/:userid", (req, res) => {
+  QuizResults.find({ userId: req.params.userid })
+    .then((quizRes) => {
+      res.json(quizRes);
     })
     .catch((err) => {
       console.error(err);
