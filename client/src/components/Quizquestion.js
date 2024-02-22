@@ -75,8 +75,8 @@ function handleSubmit(event) {
             <h2>{question.question}</h2>
             <ul>
               {question.options.map((option, index) => (
-                <div key={index}>
-                  <input
+                <div key={index} className='inputQue'>
+                  <input 
                     type="radio"
                     id={`${question._id}-${index}`}
                     name={question._id}

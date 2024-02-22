@@ -81,7 +81,21 @@ button:focus {
 }
 
 img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
   border-radius: 5px;
+}
+
+.inputQu {
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.7px);
+  -webkit-backdrop-filter: blur(3.7px);
+  width: 45%;
+  margin: auto;
+}
+
+.imgC{
+  max-width: 70%;
 }

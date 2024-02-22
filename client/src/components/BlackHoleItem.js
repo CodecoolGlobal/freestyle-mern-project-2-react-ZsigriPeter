@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import "./Learn.css";
 
 function BlackHoleItem({ blackHole }) {
   return (
@@ -6,12 +7,12 @@ function BlackHoleItem({ blackHole }) {
       <h2>{blackHole.name[0]}</h2>
       <h3>{blackHole.kind}</h3>
       <p>List: {blackHole.list}</p>
-      <img src={blackHole.image} alt={blackHole.kind} />
-      <p>Constellation: {blackHole.constellation}</p>
-      <p>Discovery Year: {blackHole.discovery.year}</p>
-      <p>Discovery Location: {blackHole.discovery.location}</p>
-      <p>Discoverer: {blackHole.discovery.discoverer}</p>
-      <p>Redshift: {blackHole.redshift}</p>
+      <img src={blackHole.image} alt={blackHole.kind} className="imgC" />
+        <p className="inputQu">Constellation: {blackHole.constellation}</p>
+        <p className="inputQu">Discovery Year: {blackHole.discovery.year}</p>
+        <p className="inputQu">Discovery Location: {blackHole.discovery.location}</p>
+        <p className="inputQu">Discoverer: {blackHole.discovery.discoverer}</p>
+        <p className="inputQu">Redshift: {blackHole.redshift}</p>
       <button>
         <a href={blackHole.map}>InterStellar location</a>
       </button>
