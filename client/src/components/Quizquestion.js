@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import "./Quizquestion.css";
 
 const Quizquestions = () => {
@@ -6,6 +6,7 @@ const Quizquestions = () => {
   const [selectedOptions, setSelectedOptions] = useState({});
   const [testScore, setTestScore] = useState(0);
   const [quizCount, setQuizCount] = useState(0);
+  const [submitted, setSubmitted] = useState(false);
   let testScoreVar = 0;
 
   useEffect(() => {
@@ -14,15 +15,15 @@ const Quizquestions = () => {
 
   const fetchQuestions = async () => {
     try {
-      const response = await fetch('/api/quiz');
+      const response = await fetch("/api/quiz");
       if (response.ok) {
         const questionData = await response.json();
         setQuestions(questionData);
       } else {
-        console.error('Failed to fetch questions');
+        console.error("Failed to fetch questions");
       }
     } catch (error) {
-      console.error('Error:', error.message);
+      console.error("Error:", error.message);
     }
   };
 
@@ -33,38 +34,38 @@ const Quizquestions = () => {
     }));
   };
 
-const handleTestScore = () => {
+  const handleTestScore = () => {
     let currentScore = 0;
     questions.forEach((question) => {
-        if(selectedOptions[question._id] === question.answer){
-            currentScore++
-        }
-    })
+      if (selectedOptions[question._id] === question.answer) {
+        currentScore++;
+      }
+    });
     setTestScore(currentScore);
-    testScoreVar = currentScore
-}
+    testScoreVar = currentScore;
+  };
 
-function handleSubmit(event) {
-
-  fetch("/api/quiz", {
-      method: 'POST',
+  function handleSubmit(event) {
+    fetch("/api/quiz", {
+      method: "POST",
       headers: {
-          'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         qiuzId: quizCount,
-        userId: localStorage.getItem('currentUserId'),
-        userName: localStorage.getItem('currentUser'),
+        userId: localStorage.getItem("currentUserId"),
+        userName: localStorage.getItem("currentUser"),
         result: testScoreVar,
-        percentage: testScoreVar*10,
-      })
-  })
-      .then(response => response.json()) 
-      .catch(error => {
-          console.log(error);
-      })
-}
-
+        percentage: testScoreVar * 10,
+      }),
+    })
+      .then((response) => response.json())
+      .catch((error) => {
+        console.log(error);
+      });
+    setSubmitted(true);
+    alert("Successfully submitted your answers!");
+  }
 
   return (
     <div>
@@ -75,8 +76,8 @@ function handleSubmit(event) {
             <h2>{question.question}</h2>
             <ul>
               {question.options.map((option, index) => (
-                <div key={index} className='glassed'>
-                  <input 
+                <div key={index} className="glassed">
+                  <input
                     type="radio"
                     id={`${question._id}-${index}`}
                     name={question._id}
@@ -92,8 +93,14 @@ function handleSubmit(event) {
           </div>
         ))}
       </ul>
-      <button onClick={() => { handleTestScore(); setQuizCount(quizCount + 1); handleSubmit(); }}>Submit Answers</button>
-      {testScore !== null && <p>Your Score: {testScore} out of 10 so in total, {testScore*10} %</p> }    </div>
+      <button
+        onClick={() => {
+          handleTestScore();
+          setQuizCount(quizCount + 1);
+          handleSubmit();
+        }}>Submit Answers</button>
+      {testScore !== null && (<p>Your Score: {testScore} out of 10 so in total, {testScore * 10} % </p> )}
+    </div>
   );
 };
 
