@@ -1,4 +1,4 @@
-
+import { useState } from "react";
 import "./Login.css";
 
 function fetchUser(name) {
@@ -6,6 +6,7 @@ function fetchUser(name) {
 }
 
 function Login(props) {
+  const [errorMessage, setErrorMessage] = useState("");
   const onLogin = props.onLogin;
 
   function handleLogin(event) {
@@ -17,6 +18,10 @@ function Login(props) {
       localStorage.setItem("currentUser", user.userName);
       localStorage.setItem("currentUserId", user._id);
       onLogin();
+      setErrorMessage("");
+    })
+    .catch((error) => {
+      setErrorMessage("Invalid username. Please try again.");
     });
   }
 
@@ -31,6 +36,7 @@ function Login(props) {
             </label>
             <button type="submit">Login</button>
           </form>
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
         </div>
       }
     </div>
