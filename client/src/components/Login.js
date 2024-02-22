@@ -14,6 +14,8 @@ function Login(props) {
         event.preventDefault();
         const target=event.target;
         const name=target.userName.value;
+        const getCurrentUser = localStorage.setItem("currentUser");
+        const getCurrentUserId = localStorage.setItem("currentUserId");
         fetchUser(name)
             .then((user)=>
             {localStorage.setItem("currentUser",user.userName);
@@ -22,11 +24,15 @@ function Login(props) {
     }
 
     return (
+        <div>
+            {
         <div className="login">
             <form onSubmit={handleLogin}>
             <label >Username:<input type="text" name="userName" className="user-name"></input></label>
             <button type="submit">Login</button>
             </form>
+        </div>
+        }
         </div>
     );
 }

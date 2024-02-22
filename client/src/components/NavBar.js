@@ -17,6 +17,9 @@ function NavBar(props) {
             <a href="/login"><div className="nav-item">
                 <label>Login</label>
             </div></a>
+            <a href="/logout"><div className="nav-item">
+                <label>Logout</label>
+            </div></a>
             <a href="/profile"><div className="nav-item">
                 <label>Profile</label>
             </div></a>

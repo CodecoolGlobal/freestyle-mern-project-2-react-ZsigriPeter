@@ -14,6 +14,7 @@ import Login from './components/Login';
 import LeaderBoard from './components/LeaderBoard';
 import { useState } from "react";
 import MainPage from './components/MainPage';
+import Logout from './components/Logout';
 
 function App() {
   const [user, setUser] = useState(localStorage.getItem("currentUser"));
@@ -22,6 +23,11 @@ function App() {
   function handleLogin() {
     setUser(localStorage.getItem("currentUser"));
     setUserId(localStorage.getItem("currentUserId"));
+  }
+
+  function handleLogout() {
+    setUser(localStorage.removeItem("currentUser"));
+    setUserId(localStorage.removeItem("currentUserId"));
   }
 
   return (
@@ -37,6 +43,7 @@ function App() {
                     <Route path='/edit-user/:id' element={<EditUserData/>}/>
                     <Route path='/users' element={<UserList/>}/>
                     <Route path='/login' element={<Login onLogin={handleLogin}/>}/>
+                    <Route path='/logout' element= {<Logout onLogout={handleLogout}/>}/>
                     <Route path="/learn" element={<Learn />} />
                     <Route path="/leaderboard" element={<LeaderBoard />} />
             </Routes>
