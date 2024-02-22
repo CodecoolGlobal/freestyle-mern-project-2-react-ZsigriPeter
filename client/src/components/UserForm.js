@@ -86,7 +86,8 @@ const UserForm = ({ editMode, user }) => {
                       phoneNumber,
                       hobbies,
                     },
-                    user._id
+                    user._id,
+                    window.location.href = "/users"
                   )
               : (e) => onSubmit(e, {
                 firstName,
