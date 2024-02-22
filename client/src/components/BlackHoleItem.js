@@ -5,14 +5,16 @@ function BlackHoleItem({ blackHole }) {
   return (
     <li key={blackHole._id}>
       <h2>{blackHole.name[0]}</h2>
-      <h3>{blackHole.kind}</h3>
-      <p>List: {blackHole.list}</p>
-      <img src={blackHole.image} alt={blackHole.kind} className="imgC" />
-        <p className="inputQu">Constellation: {blackHole.constellation}</p>
-        <p className="inputQu">Discovery Year: {blackHole.discovery.year}</p>
-        <p className="inputQu">Discovery Location: {blackHole.discovery.location}</p>
-        <p className="inputQu">Discoverer: {blackHole.discovery.discoverer}</p>
-        <p className="inputQu">Redshift: {blackHole.redshift}</p>
+      <img src={blackHole.image} alt={blackHole.kind} />
+      <div className="glassed">
+        <h3>{blackHole.kind}</h3>
+        <p>List: {blackHole.list}</p>
+        <p>Constellation: {blackHole.constellation}</p>
+        <p>Discovery Year: {blackHole.discovery.year}</p>
+        <p>Discovery Location: {blackHole.discovery.location}</p>
+        <p>Discoverer: {blackHole.discovery.discoverer}</p>
+        <p>Redshift: {blackHole.redshift}</p>
+      </div>
       <button>
         <a href={blackHole.map}>InterStellar location</a>
       </button>

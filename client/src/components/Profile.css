@@ -1,6 +1,6 @@
 .profile-data {
-    color: #ffffff; /* White text */
-    font-family: Arial, sans-serif; /* Choose a suitable font */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
 }
 
 .profile-data label {
@@ -10,7 +10,7 @@
 
 .first-last-name label {
     font-weight: bold;
-    font-size: 24px; /* Larger font size */
+    font-size: 24px;
 }
 
 .link-btn {
@@ -22,16 +22,16 @@
 }
 
 .link-btn:hover {
-    background-color: #333333; /* Darker shade of black on hover */
+    background-color: #333333;
 }
 
-/* Container for profile data */
+
 .profile-container {
     padding: 20px;
-    border: 1px solid #ffffff; /* White border */
+    border: 1px solid #ffffff;
     border-radius: 10px;
-    background-color: #000000; /* Black background */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* White box shadow */
+    background-color: #000000;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 button {

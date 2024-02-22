@@ -58,11 +58,6 @@ const UserForm = ({ editMode, user }) => {
     }
   }, [user]);
 
-  /* if (!user) {
-    // If user data is not available yet, return null or loading indicator
-    return null; // or return <div>Loading...</div>;
-  } */
-
   return (
       <>
         <div className="registration-container">

@@ -1,5 +1,3 @@
-import { Link, Navigate } from "react-router-dom";
-
 function NavBar(props) {
 
     const userName=props.userName;
@@ -26,7 +24,6 @@ function NavBar(props) {
                     <label>Leaderboard</label>
                 </div></a>                
                 <div className="user-name-nav">
-                    {/* <img src="https://e7.pngegg.com/pngimages/782/114/png-clipart-profile-icon-circled-user-icon-icons-logos-emojis-users.png" style={{width:"30px",height:"30px"}} alt="profile" /> */}
                     <label>{userName}</label>
                     <button onClick={handleLogout}> Logout </button>
                 </div>
