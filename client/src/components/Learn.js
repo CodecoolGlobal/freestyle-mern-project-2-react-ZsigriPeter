@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BlackHoleItem from './BlackHoleItem';
-import "../Learn.css";
+import "./Learn.css";
 
 const fetchBlackHoles = async (kind) => {
   try {

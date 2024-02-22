@@ -64,3 +64,10 @@
     background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
     box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
+
+.error-message {
+  margin-top: 10px; 
+  color: #ff4d4d; 
+  font-size: 30px; 
+  text-align: center; 
+}
