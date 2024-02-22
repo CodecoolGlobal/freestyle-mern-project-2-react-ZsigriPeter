@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import "./Login.css";
 
 function fetchUser(name) {
@@ -6,6 +7,7 @@ function fetchUser(name) {
 }
 
 function Login(props) {
+  const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
   const onLogin = props.onLogin;
 
@@ -19,6 +21,7 @@ function Login(props) {
       localStorage.setItem("currentUserId", user._id);
       onLogin();
       setErrorMessage("");
+      navigate('/profile');
     })
     .catch((error) => {
       setErrorMessage("Invalid username. Please try again.");
