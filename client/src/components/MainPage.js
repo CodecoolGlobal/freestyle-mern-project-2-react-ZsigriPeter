@@ -16,7 +16,7 @@ const MainPage = () => {
       }
     };
     fetchNasaApi();
-  }, [NASA_API]); 
+  },[]); 
 
 
   return (

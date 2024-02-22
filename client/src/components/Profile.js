@@ -60,7 +60,8 @@ function Profile(props) {
                 <a className="link-btn" href="/profile/edit"><div className="nav-item">
                 <label>Edit Userdata</label>
             </div></a>
-            <div className="Leaderboard">
+            {(quizResults&&quizResults.length>0)?(
+                <div className="Leaderboard">
             <table>
                 <thead>
                     <tr>
@@ -78,6 +79,11 @@ function Profile(props) {
                 </tbody>
             </table>
             </div>
+            ):(
+                <div>
+                    <p>No Quiz Results yet</p>
+                </div>
+            )}
             </>
 
             ) : (
