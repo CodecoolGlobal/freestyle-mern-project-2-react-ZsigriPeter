@@ -9,14 +9,12 @@ body {
 .container {
   width: 80%;
   margin: 0 auto;
-  /* Center horizontally */
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* Ensure container takes at least 100% of viewport height */
 }
 
 input[type="text"] {
@@ -25,11 +23,14 @@ input[type="text"] {
   margin-bottom: 20px;
   border: none;
   border-radius: 5px;
+  font-size: 20px; /* Increased font size */
+  color: #fff; /* Change the text color for better visibility */
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 40px; /* Increased font size */
   margin-bottom: 20px;
+  color: #fff; /* Change the text color */
 }
 
 ul {
@@ -42,18 +43,20 @@ li {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 28px; /* Increased font size */
   margin-bottom: 10px;
+  color: #fff; /* Change the text color */
 }
 
 p {
-  font-size: 20px;
+  font-size: 24px; /* Increased font size */
   margin-bottom: 15px;
+  color: #fff; /* Change the text color */
 }
 
 button {
   width: 200px;
-  font-size: 16px;
+  font-size: 18px; /* Increased font size */
   font-weight: 600;
   color: #fff;
   cursor: pointer;
@@ -63,31 +66,19 @@ button {
   border: none;
   background-size: 300% 100%;
   margin-top: 20px;
-
   border-radius: 50px;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  transition: background-position 0.4s ease-in-out;
+  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
 
 button:hover {
   background-position: 100% 0;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
 }
 
 button:focus {
   outline: none;
 }
-
-button {
-  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
-  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
-}
-
 
 img {
   max-width: 100%;

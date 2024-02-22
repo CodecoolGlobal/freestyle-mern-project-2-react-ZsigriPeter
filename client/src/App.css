@@ -1,14 +1,15 @@
 .App {
   text-align: center;
-  background-image: url("https://images6.alphacoders.com/128/1289303.png"); 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center center;
+  background-image: url("https://i.pinimg.com/originals/14/fd/ce/14fdcece19da63a3262c4a0b9a5368a6.jpg"); 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   color: #fff;
-
+  height: 100%;
+  overflow: auto;
 }
+
 
 .profile-data {
   margin-top: 40px;
